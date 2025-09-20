@@ -55,7 +55,7 @@ if page == "Overview":
         emergency_counts = df['title'].apply(lambda x: x.split(':')[0]).value_counts().head(10)
         fig, ax = plt.subplots(figsize=(10, 6))
         emergency_counts.plot(kind='bar', ax=ax)
-        plt.title('Top 10 Emergency Types')
+        plt.title('Distribution of All Emergency Types in the Dataset')
         plt.xlabel('Emergency Type')
         plt.ylabel('Count')
         plt.xticks(rotation=45)
